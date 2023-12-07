@@ -24,3 +24,6 @@ until round.deck.cards.empty?
 end
 
 puts "****** Game over! ******"
+puts "You had #{round.number_correct} correct guesses out of #{deck.count} for a total score of #{round.percent_correct.round(2)}%."
+puts "STEM - #{round.percent_correct_by_category(:STEM)}% correct"
+puts "Geography - #{round.percent_correct_by_category(:Geography)}% correct"
