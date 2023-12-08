@@ -1,3 +1,13 @@
 What is the capital of Alaska?,Juneau,Geography
 The Viking spacecraft sent back to Earth photographs and reports about the surface of which planet?,Mars,STEM
 Describe in words the exact direction that is 697.5° clockwise from due north?,North north west,STEM
+What is the capital of France?,Paris,Geography
+Which planet is known as the Red Planet?,Mars,STEM
+What is the powerhouse of the cell?,Mitochondria,Science
+Who wrote "Romeo and Juliet"?,William Shakespeare,Literature
+What is the largest mammal on Earth?,Blue Whale,Science
+What is the currency of Japan?,Yen,Geography
+What is the chemical symbol for gold?,Au,Science
+What programming language is this flashcard game written in?,Ruby,Technology
+Who is the 44th president of the United States?,Barack Obama,History
+What is the boiling point of water in Celsius?,100,Science

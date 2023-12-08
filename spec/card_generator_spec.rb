@@ -17,7 +17,7 @@ RSpec.describe CardGenerator do
     filename = "cards.txt"
     cards = CardGenerator.new(filename).cards
 
-    expect(cards.count).to eq(3)
+    expect(cards.count).to eq(13)
   end
 
   it 'has a question' do
