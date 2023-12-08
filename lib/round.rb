@@ -31,14 +31,18 @@ class Round
   end
 
   def percent_correct
-    (number_correct.to_f / turns.count.to_f) * 100
+    total_turns = turns.count
+    return 0 if total_turns.zero?
+
+    (number_correct.to_f / total_turns.to_f) * 100
   end
 
   def percent_correct_by_category(category)
     category_turns = turns.select { |turn| turn.card.category == category }
-    return 0.0 if category_turns.empty?
-  
-    correct_turns = category_turns.select(&:correct?)
-    (correct_turns.count.to_f / category_turns.count.to_f) * 100
+    total_category_turns = category_turns.count
+
+    return 0 if total_category_turns.zero?
+
+    (number_correct_by_category(category).to_f / total_category_turns.to_f) * 100
   end
 end

@@ -26,8 +26,15 @@ end
 puts "****** Game over! ******"
 puts "You had #{round.number_correct} correct guesses out of #{deck.count} for a total score of #{round.percent_correct.round(2)}%."
 
-categories = deck.cards.map(&:category).uniq
-categories.each do |category|
-  category_percent = round.percent_correct_by_category(category)
+category_stats = Hash.new { |hash, key| hash[key] = { total: 0, correct: 0 } }
+
+round.turns.each do |turn|
+  category = turn.card.category
+  category_stats[category][:total] += 1
+  category_stats[category][:correct] += 1 if turn.correct?
+end
+
+category_stats.each do |category, stats|
+  category_percent = (stats[:correct].to_f / stats[:total]) * 100
   puts "#{category} - #{category_percent.round(2)}% correct"
 end
